@@ -12,4 +12,8 @@ Typically used with [s2i-minecraft-server](https://github.com/vorburger/s2i-mine
 
     s2i build --copy . s2i-minecraft-server swissarmyknife-minecraft-server
 
-    docker run --rm -p 25565:25565 swissarmyknife-minecraft-server
+    docker -it run --rm -p 25565:25565 swissarmyknife-minecraft-server
+
+    > /lp import ../setup/luckperms.cmds
+    > /lp user <YOU> parent add groot
+

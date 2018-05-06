@@ -10,6 +10,8 @@ ln -s /deployments/persistent/data/luckperms/yaml-storage /deployments/luckperms
 # For all
 mv *.jar /deployments/mods/
 cp -vR /tmp/src/src/* /deployments/
+find /deployments/ -exec chmod a+rw {} \;
 
 # Run server once
 # TODO https://github.com/OASIS-learn-study/swissarmyknife-minecraft-server/issues/2
+

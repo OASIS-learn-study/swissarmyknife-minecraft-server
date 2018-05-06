@@ -1,8 +1,15 @@
 #!/bin/sh
 set -ex
 
+# LuckPerms
 curl -sS -L -J -O https://ci.lucko.me/job/LuckPerms/654/artifact/sponge/target/LuckPerms-Sponge-4.1.102.jar
+mkdir -p /deployments/luckperms/
+mkdir -p /deployments/persistent/data/luckperms/yaml-storage
+ln -s /deployments/persistent/data/luckperms/yaml-storage /deployments/luckperms/yaml-storage
 
+# For all
 mv *.jar /deployments/mods/
-
 cp -vR /tmp/src/src/* /deployments/
+
+# Run server once
+# TODO https://github.com/OASIS-learn-study/swissarmyknife-minecraft-server/issues/2

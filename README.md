@@ -17,3 +17,9 @@ Typically used with [s2i-minecraft-server](https://github.com/vorburger/s2i-mine
     > /lp import ../setup/luckperms.cmds
     > /lp user <YOU> parent add groot
 
+
+## OpenShift
+
+    oc new-build s2i-minecraft-server~https://github.com/OASIS-learn-study/swissarmyknife-minecraft-server.git
+
+You now have to be creative to be able to do the initial (above) `/lp` commands! ;-)

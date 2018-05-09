@@ -11,8 +11,6 @@
 /luckperms group boss parent add fbi
 /luckperms group admin parent add boss
 /luckperms group op parent add admin
-/luckperms group groot permission set luckperms true
-/luckperms group groot permission set nucleus.nucleus.setupperms.base true
 /luckperms createtrack level
 /luckperms track level append default
 /luckperms track level append verified
@@ -70,6 +68,8 @@
 /luckperms group admin     permission set nucleus.socialspy.base          true
 /luckperms group op        permission set nucleus.rules.remove.base       true
 /luckperms group op        permission set nucleus.jail.exempt.target      true
+/luckperms group groot     permission set luckperms                       true
+/luckperms group groot     permission set nucleus.nucleus.setupperms.base true
 /luckperms group verified meta set home-count 1'
 /luckperms group verified meta addprefix 100 &5[V]
 /luckperms group fbi meta addprefix 100 &5[FBI]

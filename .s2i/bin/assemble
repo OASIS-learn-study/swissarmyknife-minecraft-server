@@ -4,6 +4,9 @@ set -ex
 # LuckPerms
 curl -sS -L -J -O https://ci.lucko.me/job/LuckPerms/654/artifact/sponge/target/LuckPerms-Sponge-4.1.102.jar
 
+# Nucleus
+curl -sS -L -J -O https://github.com/NucleusPowered/Nucleus/releases/download/1.3.10/Nucleus-1.3.10-S7.0-MC1.12.2-plugin.jar
+
 # For all
 mv *.jar /deployments/mods/
 cp -vR /tmp/src/src/* /deployments/

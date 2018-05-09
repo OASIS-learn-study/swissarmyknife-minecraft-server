@@ -64,7 +64,6 @@
 /luckperms group admin     permission set ch.vorburger.news.add           true
 /luckperms group admin     permission set nucleus.rules.add.base          true
 /luckperms group admin     permission set nucleus.world.base              true
-/luckperms group admin     permission set nucleus.lockweather.base        true
 /luckperms group admin     permission set nucleus.time.base               true
 /luckperms group admin     permission set nucleus.lockweather.base        true
 /luckperms group admin     permission set nucleus.socialspy.base          true

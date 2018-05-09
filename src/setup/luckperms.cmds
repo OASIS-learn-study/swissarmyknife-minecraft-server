@@ -68,6 +68,7 @@
 /luckperms group admin     permission set nucleus.socialspy.base          true
 /luckperms group op        permission set nucleus.rules.remove.base       true
 /luckperms group op        permission set nucleus.jail.exempt.target      true
+/luckperms group groot     permission set sponge                          true
 /luckperms group groot     permission set luckperms                       true
 /luckperms group groot     permission set nucleus.nucleus.setupperms.base true
 /luckperms group verified meta set home-count 1'

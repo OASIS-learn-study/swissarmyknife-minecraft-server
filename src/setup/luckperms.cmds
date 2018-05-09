@@ -11,7 +11,8 @@
 /luckperms group boss parent add fbi
 /luckperms group admin parent add boss
 /luckperms group op parent add admin
-/luckperms group groot permission set * true
+/luckperms group groot permission set luckperms true
+/luckperms group groot permission set nucleus.nucleus.setupperms.base true
 /luckperms createtrack level
 /luckperms track level append default
 /luckperms track level append verified

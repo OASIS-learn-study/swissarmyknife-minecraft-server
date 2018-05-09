@@ -16,7 +16,9 @@ Typically used with [s2i-minecraft-server](https://github.com/vorburger/s2i-mine
 
     > /lp import ../setup/luckperms.cmds
     > /lp user <YOU> parent add groot
-
+    > /nucleus setupperms ADMIN groot
+    > /nucleus setupperms MOD boss
+    > /nucleus setupperms USER assistant
 
 ## OpenShift
 

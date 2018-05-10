@@ -11,7 +11,7 @@ Typically used with [s2i-minecraft-server](https://github.com/vorburger/s2i-mine
 
 ## Local Build
 
-    s2i build --copy . s2i-minecraft-server swissarmyknife-minecraft-server
+    s2i build -e bot_token=... -e main_discord_channel=... --copy . s2i-minecraft-server swissarmyknife-minecraft-server
 
     docker run -it --rm -p 25565:25565 swissarmyknife-minecraft-server
 

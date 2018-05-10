@@ -1,5 +1,9 @@
 #!/bin/sh
+# We're not security paranoid here, but note that set -x will expose the token in the build log
 set -ex
+
+[[ -z "$bot_token" ]] && { echo "Environment variable bot_token must be set" ; exit 1; }
+[[ -z "$main_discord_channel" ]] && { echo "Environment variable main_discord_channel must be set" ; exit 1; }
 
 # LuckPerms
 curl -sS -L -J -O https://ci.lucko.me/job/LuckPerms/654/artifact/sponge/target/LuckPerms-Sponge-4.1.102.jar
@@ -23,6 +27,13 @@ cd ..
 mv *.jar /deployments/mods/
 cp -vR /tmp/src/src/* /deployments/
 find /deployments/ -exec chmod a+rw {} \;
+
+# Replace some environment variables
+# TODO it would be nicer to be able to use envsubst instead of sed here
+#      see https://github.com/fabric8io-images/s2i/issues/155
+#      envsubst < /tmp/src/src/config/magibridge/MagiBridge.conf > /deployments/config/magibridge/MagiBridge.conf
+sed 's/\$bot_token/'"$bot_token"'/g'                       /tmp/src/src/config/magibridge/MagiBridge.conf   > /deployments/config/magibridge/MagiBridge.conf.1
+sed 's/\$main_discord_channel/'"$main_discord_channel"'/g' /deployments/config/magibridge/MagiBridge.conf.1 > /deployments/config/magibridge/MagiBridge.conf
 
 # Run server once
 # TODO https://github.com/OASIS-learn-study/swissarmyknife-minecraft-server/issues/2

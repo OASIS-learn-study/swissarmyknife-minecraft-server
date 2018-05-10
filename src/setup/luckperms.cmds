@@ -1,6 +1,6 @@
 /luckperms creategroup groot
-/luckperms creategroup admin
 /luckperms creategroup op
+/luckperms creategroup admin
 /luckperms creategroup boss
 /luckperms creategroup fbi
 /luckperms creategroup assistant
@@ -11,12 +11,14 @@
 /luckperms group boss parent add fbi
 /luckperms group admin parent add boss
 /luckperms group op parent add admin
+/luckperms group groot parent add op
 /luckperms createtrack level
 /luckperms track level append default
 /luckperms track level append verified
 /luckperms track level append assistant
 /luckperms track level append fbi
 /luckperms track level append boss
+/luckperms group default   permission set storeys.guard.adventure         true
 /luckperms group verified  permission set ch.vorburger.news.read          true
 /luckperms group verified  permission set nucleus.hat.base                true
 /luckperms group verified  permission set nucleus.nick.base               true
@@ -25,6 +27,7 @@
 /luckperms group verified  permission set minecraft.command.seed          true
 /luckperms group verified  permission set minecraft.command.say           true
 /luckperms group verified  permission set nucleus.message.base            true
+/luckperms group assistant permission set storeys.guard.creative          true
 /luckperms group assistant permission set nucleus.teleport.teleport.base  true
 /luckperms group assistant permission set nucleus.back.base               true
 /luckperms group assistant permission set nucleus.ignite.others           true

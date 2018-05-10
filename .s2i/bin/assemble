@@ -14,9 +14,12 @@ curl -sS -L -J -O https://github.com/NucleusPowered/Nucleus/releases/download/1.
 # MagiBridge
 # https://github.com/Eufranio/MagiBridge/issues/73
 # NB we don't have "git" in this S2I container, so:
-curl -sS -L -J -O https://github.com/Eufranio/MagiBridge/archive/api-7.zip
-unzip MagiBridge-api-7.zip
-cd MagiBridge-api-7
+MagiBridge_repo=vorburger
+# https://github.com/Eufranio/MagiBridge/issues/76
+MagiBridge_REV=api-7_bug76-rm-mcclans
+curl -sS -L -J -O https://github.com/$MagiBridge_repo/MagiBridge/archive/$MagiBridge_REV.zip
+unzip MagiBridge-$MagiBridge_REV.zip
+cd MagiBridge-$MagiBridge_REV
 # https://github.com/Eufranio/MagiBridge/pull/74
 chmod +x ./gradlew
 ./gradlew build

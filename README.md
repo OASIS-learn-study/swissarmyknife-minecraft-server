@@ -4,6 +4,7 @@ Minecraft server container with a :purse: :briefcase: :handbag: collection of â›
 
 * https://luckperms.github.io
 * https://nucleuspowered.org
+* https://github.com/Eufranio/MagiBridge
 
 Typically used with [s2i-minecraft-server](https://github.com/vorburger/s2i-minecraft-server/) - but doesn't have to be.
 

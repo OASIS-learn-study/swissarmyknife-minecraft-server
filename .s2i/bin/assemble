@@ -7,6 +7,18 @@ curl -sS -L -J -O https://ci.lucko.me/job/LuckPerms/654/artifact/sponge/target/L
 # Nucleus
 curl -sS -L -J -O https://github.com/NucleusPowered/Nucleus/releases/download/1.3.10/Nucleus-1.3.10-S7.0-MC1.12.2-plugin.jar
 
+# MagiBridge
+# https://github.com/Eufranio/MagiBridge/issues/73
+# NB we don't have "git" in this S2I container, so:
+curl -sS -L -J -O https://github.com/Eufranio/MagiBridge/archive/api-7.zip
+unzip MagiBridge-api-7.zip
+cd MagiBridge-api-7
+# https://github.com/Eufranio/MagiBridge/pull/74
+chmod +x ./gradlew
+./gradlew build
+cp build/libs/MagiBridge-*.jar ..
+cd ..
+
 # For all
 mv *.jar /deployments/mods/
 cp -vR /tmp/src/src/* /deployments/

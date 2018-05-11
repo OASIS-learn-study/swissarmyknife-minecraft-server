@@ -6,6 +6,7 @@ Minecraft server container with a :purse: :briefcase: :handbag: collection of â›
 * https://nucleuspowered.org
 * https://github.com/Eufranio/MagiBridge
 * http://www.enginehub.org/worldedit
+* https://ore.spongepowered.org/VoxelBox/VoxelSniper
 
 Typically used with [s2i-minecraft-server](https://github.com/vorburger/s2i-minecraft-server/) - but doesn't have to be.
 

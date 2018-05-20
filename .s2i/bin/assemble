@@ -6,7 +6,7 @@ set -ex
 [[ -z "$main_discord_channel" ]] && { echo "Environment variable main_discord_channel must be set" ; exit 1; }
 
 # LuckPerms
-curl -sS -L -J -O https://ci.lucko.me/job/LuckPerms/654/artifact/sponge/target/LuckPerms-Sponge-4.1.102.jar
+curl -sS -L -J -O https://ci.lucko.me/job/LuckPerms/670/artifact/sponge/target/LuckPerms-Sponge-4.2.12.jar
 
 # WorldEdit
 curl -sS -L -J -O http://builds.enginehub.org/job/worldedit/10120/download/worldedit-sponge-6.1.9-SNAPSHOT-dist.jar

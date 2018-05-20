@@ -6,18 +6,18 @@ set -ex
 [[ -z "$main_discord_channel" ]] && { echo "Environment variable main_discord_channel must be set" ; exit 1; }
 
 # LuckPerms
-curl -sS -L -J -O https://ci.lucko.me/job/LuckPerms/670/artifact/sponge/target/LuckPerms-Sponge-4.2.12.jar
+curl -sS -L -J -f -O https://ci.lucko.me/job/LuckPerms/670/artifact/sponge/target/LuckPerms-Sponge-4.2.12.jar
 
 # WorldEdit
-curl -sS -L -J -O http://builds.enginehub.org/job/worldedit/10120/download/worldedit-sponge-6.1.9-SNAPSHOT-dist.jar
+curl -sS -L -J -f -O http://builds.enginehub.org/job/worldedit/10120/download/worldedit-sponge-6.1.9-SNAPSHOT-dist.jar
 
 # Nucleus
-curl -sS -L -J -O https://github.com/NucleusPowered/Nucleus/releases/download/1.3.10/Nucleus-1.3.10-S7.0-MC1.12.2-plugin.jar
+curl -sS -L -J -f -O https://github.com/NucleusPowered/Nucleus/releases/download/1.3.10/Nucleus-1.3.10-S7.0-MC1.12.2-plugin.jar
 
 # VoxelSniper
-curl -sS -L -J -O http://ci.voxelmodpack.com/job/VoxelSniper/lastSuccessfulBuild/artifact/build/libs/VoxelSniper-8.5.0-SNAPSHOT.jar
+curl -sS -L -J -f -O http://ci.voxelmodpack.com/job/VoxelSniper/lastSuccessfulBuild/artifact/build/libs/VoxelSniper-8.5.0-SNAPSHOT.jar
 # NB we don't have "git" in this S2I container, so:
-# curl -sS -L -J -O https://github.com/TVPT/VoxelSniper/archive/sponge-1.12.zip
+# curl -sS -L -J -f -O https://github.com/TVPT/VoxelSniper/archive/sponge-1.12.zip
 # unzip VoxelSniper-sponge-1.12.zip
 # cd VoxelSniper-sponge-1.12.zip
 # ./gradlew build
@@ -30,7 +30,7 @@ curl -sS -L -J -O http://ci.voxelmodpack.com/job/VoxelSniper/lastSuccessfulBuild
 MagiBridge_repo=vorburger
 # https://github.com/Eufranio/MagiBridge/issues/76
 MagiBridge_REV=api-7_bug76-rm-mcclans
-curl -sS -L -J -O https://github.com/$MagiBridge_repo/MagiBridge/archive/$MagiBridge_REV.zip
+curl -sS -L -J -f -O https://github.com/$MagiBridge_repo/MagiBridge/archive/$MagiBridge_REV.zip
 unzip MagiBridge-$MagiBridge_REV.zip
 cd MagiBridge-$MagiBridge_REV
 # https://github.com/Eufranio/MagiBridge/pull/74

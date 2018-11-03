@@ -9,7 +9,7 @@ set -ex
 curl -sS -L -J -f -O https://github.com/OASIS-learn-study/swissarmyknife-minecraft-server-binaries/raw/master/LuckPerms-Sponge-4.2.25.jar
 
 # WorldEdit
-curl -sS -L -J -f -O http://builds.enginehub.org/job/worldedit/10120/download/worldedit-sponge-6.1.9-SNAPSHOT-dist.jar
+curl -sS -L -J -f -O https://github.com/OASIS-learn-study/swissarmyknife-minecraft-server-binaries/raw/master/worldedit-sponge-6.1.9-SNAPSHOT-dist.jar
 
 # Nucleus
 curl -sS -L -J -f -O https://github.com/NucleusPowered/Nucleus/releases/download/1.3.10/Nucleus-1.3.10-S7.0-MC1.12.2-plugin.jar

@@ -18,7 +18,7 @@ curl -sS -L -J -f -O https://github.com/NucleusPowered/Nucleus/releases/download
 curl -sS -L -J -f -O http://ci.voxelmodpack.com/job/VoxelSniper/lastSuccessfulBuild/artifact/build/libs/VoxelSniper-8.5.0-SNAPSHOT.jar
 # NB we don't have "git" in this S2I container, so:
 # curl -sS -L -J -f -O https://github.com/TVPT/VoxelSniper/archive/sponge-1.12.zip
-# unzip VoxelSniper-sponge-1.12.zip
+# jar xvf VoxelSniper-sponge-1.12.zip
 # cd VoxelSniper-sponge-1.12.zip
 # ./gradlew build
 # cp build/libs/*.jar ..
@@ -31,7 +31,7 @@ MagiBridge_repo=vorburger
 # https://github.com/Eufranio/MagiBridge/issues/76
 MagiBridge_REV=api-7_bug76-rm-mcclans
 curl -sS -L -J -f -O https://github.com/$MagiBridge_repo/MagiBridge/archive/$MagiBridge_REV.zip
-unzip MagiBridge-$MagiBridge_REV.zip
+jar xvf MagiBridge-$MagiBridge_REV.zip
 cd MagiBridge-$MagiBridge_REV
 # https://github.com/Eufranio/MagiBridge/pull/74
 chmod +x ./gradlew

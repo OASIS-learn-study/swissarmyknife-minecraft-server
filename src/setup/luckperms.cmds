@@ -19,6 +19,8 @@
 /luckperms track level append fbi
 /luckperms track level append boss
 /luckperms group default   permission set storeys.guard.adventure         true
+/luckperms group default   permission set storeys.command.make            true
+/luckperms group default   permission set storeys.command.make.beta       true
 /luckperms group verified  permission set ch.vorburger.news.read          true
 /luckperms group verified  permission set nucleus.hat.base                true
 /luckperms group verified  permission set nucleus.nick.base               true

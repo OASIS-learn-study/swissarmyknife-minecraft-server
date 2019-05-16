@@ -15,7 +15,8 @@ curl -sS -L -J -f -O https://github.com/OASIS-learn-study/swissarmyknife-minecra
 curl -sS -L -J -f -O https://github.com/NucleusPowered/Nucleus/releases/download/1.3.10/Nucleus-1.3.10-S7.0-MC1.12.2-plugin.jar
 
 # VoxelSniper
-curl -sS -L -J -f -O http://ci.voxelmodpack.com/job/VoxelSniper/lastSuccessfulBuild/artifact/build/libs/VoxelSniper-8.5.0-SNAPSHOT.jar
+`curl 'https://ore.spongepowered.org/VoxelBox/VoxelSniper/versions/8.4.0/confirm?downloadType=1' -s | grep -o 'curl.*' | sed s/\"//g` -s
+
 # NB we don't have "git" in this S2I container, so:
 # curl -sS -L -J -f -O https://github.com/TVPT/VoxelSniper/archive/sponge-1.12.zip
 # jar xvf VoxelSniper-sponge-1.12.zip

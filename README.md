@@ -1,5 +1,7 @@
 # swissarmyknife-minecraft-server
 
+**This repository is now archived.** But it lives on in https://github.com/OASIS-learn-study/minecraft-storeys-maker, see [its #276](https://github.com/OASIS-learn-study/minecraft-storeys-maker/issues/276).
+
 Minecraft server container with a :purse: :briefcase: :handbag: collection of ⛑️  essential plugins and :beginner: opinionated configurations:
 
 * https://luckperms.github.io
